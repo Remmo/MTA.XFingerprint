@@ -17,6 +17,7 @@ using Java.Lang;
 using Javax.Crypto;
 using Android.Util;
 using MTA.XFingerprint;
+using Android.Support.V4.App;
 
 [assembly: Xamarin.Forms.Dependency(typeof(Fingerprint))]
 namespace MTA.XFingerprint.Droid
@@ -34,6 +35,9 @@ namespace MTA.XFingerprint.Droid
             }
             else
             {
+                //ActivityCompat.RequestPermissions(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity,
+                //new string[] { Manifest.Permission.UseFingerprint },111222);
+
                 // No permission. Go and ask for permissions and don't start the scanner. See
                 // http://developer.android.com/training/permissions/requesting.html
             }
