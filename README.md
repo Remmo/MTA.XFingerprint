@@ -4,6 +4,15 @@
 
 A simple and fast PCL Fingerprint Reader for Xamarin - Created by Mind the app http://www.mindtheapp.it/
 
+
+### Sample
+
+```
+	XFingerprint.Current.CheckPermissions();//If not enabled, prompt user for required permissions
+	Boolean isAvailable = XFingerprint.Current.IsAvailable();//Check if phone has the fingerprint reader
+	XFingerprint.Current.RequestFingerprint(/*Action onFingerprintAccepetd*/ /*Action onFingerprintRefused*/, /*timer*/);
+```
+
 ### Android required permissions
 ```
 	<uses-permission android:name="android.permission.USE_FINGERPRINT" />
